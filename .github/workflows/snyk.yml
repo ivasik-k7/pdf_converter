@@ -1,0 +1,30 @@
+name: Snyk Security Scan
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  security_scan:
+    name: "Snyk Security Scan"
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Ruby
+        uses: actions/setup-ruby@v1
+        with:
+          ruby-version: 3.0
+
+      - name: Install dependencies
+        run: |
+          bash install.sh
+
+      - name: Run Snyk security test
+        run: |
+          npx snyk auth ${{ secrets.SNYK_TOKEN }}
+          npx snyk test
