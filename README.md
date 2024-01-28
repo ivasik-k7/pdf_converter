@@ -7,6 +7,10 @@
         alt="Quality Gate Status">
         <img src="https://sonarcloud.io/api/project_badges/measure?project=ivasik-k7_pdf_converter&metric=alert_status"
             alt="Quality Gate Status"></a>
+    <a href="https://snyk.io/test/github/ivasik-k7/pdf_converter"
+        alt="Quality Gate Status">
+        <img src="https://snyk.io/test/github/ivasik-k7/pdf_converter/badge.svg"
+            alt="Quality Gate Status"></a>
 </p>
 
 A simple script that converts AsciiDoc files to PDF files.
